@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card({children}) {
+function Card({children,isReverse}) {
   return (
-    <div className='card'>
+    <div className={`card ${isReverse ? 'reverse' : '' }`}>
         {children}
     </div>
   )

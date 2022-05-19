@@ -24,19 +24,19 @@ ul {
 }
 
 header {
-  height: 70px;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card {
   background-color: #fff;
   color: #333;
   border-radius: 15px;
-  padding: 40px 50px;
+  padding: 40px 15px;
   margin: 20px 0;
   position: relative;
 }
@@ -44,6 +44,7 @@ header {
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
+  padding: 15px 15px;
 }
 
 .card h2 {
@@ -117,7 +118,11 @@ input {
 input:focus {
   outline: none;
 }
-
+.feedback-list {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 10px;
+}
 .feedback-stats {
   color: #fff;
   display: flex;
@@ -188,8 +193,9 @@ input:focus {
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -209,6 +215,25 @@ input:focus {
 
 .about p {
   margin: 10px 0;
+}
+.text-center{
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #fff;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6a95;
+  border-radius: 10px;
 }
 
 @media (max-width: 600px) {
